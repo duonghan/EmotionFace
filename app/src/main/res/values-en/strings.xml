@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cognitiveldentify</string>
+    <string name="detect">Detect Face</string>
+    <string name="indentify">Identify Face</string>
+    <string name="dt_failed">Detection failed !</string>
+    <string name="dt_no">Detection Finished. Nothing detected</string>
+    <string name="dt_ok">Detection Finished. %d face(s) detected</string>
+    <string name="dt_done">Detection Finished. Done</string>
+    <string name="dt">Detecting...</string>
+    <string name="ident_pers_stt">Getting person group status...</string>
+    <string name="identify">Identify Face</string>
+</resources>

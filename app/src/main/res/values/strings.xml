@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Nhận diện cảm xúc</string>
+    <string name="detect">Phát hiện</string>
+    <string name="identify">Xác định</string>
+    <string name="dt_failed">Phát hiện thất bại</string>
+    <string name="dt_no">Quá trình hoàn tất! Không phát hiện được gì</string>
+    <string name="dt_ok">Quá trình hoàn tất! %d khuôn mặt được phát hiện</string>
+    <string name="dt_done">Quá trình hoàn tất! Đã nhận diện</string>
+    <string name="dt">Đang xử lý nhận diện...</string>
+    <string name="ident_pers_stt">Đang lấy thông tin trạng thái...</string>
+</resources>

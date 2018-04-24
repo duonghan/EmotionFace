@@ -27,4 +27,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     //    //Add Library
     implementation 'com.microsoft.projectoxford:face:1.4.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
 }

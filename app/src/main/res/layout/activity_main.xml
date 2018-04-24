@@ -4,12 +4,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/AppSplashTheme"
     tools:context="vn.edu.hust.student.haicm.cognitiveldentify.MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <LinearLayout
         android:id="@+id/groupButton"
@@ -38,5 +34,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@id/groupButton"
+        android:contentDescription="@string/img_desc"
+        android:padding="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
 </RelativeLayout>

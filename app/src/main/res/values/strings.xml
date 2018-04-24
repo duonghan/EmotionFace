@@ -8,4 +8,5 @@
     <string name="dt_done">Quá trình hoàn tất! Đã nhận diện</string>
     <string name="dt">Đang xử lý nhận diện...</string>
     <string name="ident_pers_stt">Đang lấy thông tin trạng thái...</string>
+    <string name="img_desc">Hình ảnh kiểm tra</string>
 </resources>

@@ -1,5 +1,7 @@
 package vn.edu.hust.student.haicm.cognitiveldentify;
 
+import android.animation.Animator;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -7,33 +9,34 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.media.Image;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.microsoft.projectoxford.face.*;
+import com.github.chrisbanes.photoview.PhotoView;
+import com.microsoft.projectoxford.face.FaceServiceClient;
+import com.microsoft.projectoxford.face.FaceServiceRestClient;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.FaceAttribute;
 import com.microsoft.projectoxford.face.contract.FaceRectangle;
 import com.microsoft.projectoxford.face.contract.IdentifyResult;
 import com.microsoft.projectoxford.face.contract.Person;
 import com.microsoft.projectoxford.face.contract.TrainingStatus;
-import com.microsoft.projectoxford.face.rest.ClientException;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.UUID;
 
-public class MainActivity extends AppCompatActivity {
+//import com.github.chrisbanes.photoview.PhotoViewAttacher;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private FaceServiceClient faceServiceClient = new FaceServiceRestClient("https://westcentralus.api.cognitive.microsoft.com/face/v1.0", "e37c547b94de46a5a0bcabd572bfe40a");
     private final String personGroupId = "newtest";
@@ -115,31 +118,29 @@ public class MainActivity extends AppCompatActivity {
         Button btnDetect = (Button)findViewById(R.id.btnDetectFace);
         Button btnIdentify = (Button)findViewById(R.id.btnIdentify);
 
-        /**
-         * @description Using device's camera
-         */
-        btnCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btnCamera.setOnClickListener(this);
+        btnIdentify.setOnClickListener(this);
+        btnDetect.setOnClickListener(this);
+        imageView.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnCamera:
                 Intent intent= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent, 0);
-            }
-        });
 
-        btnDetect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                break;
+            case R.id.btnDetectFace:
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                 mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
 
                 new detectTask().execute(inputStream);
-            }
-        });
 
-        btnIdentify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                break;
+            case R.id.btnIdentify:
                 try {
                     index = 0;
                     index2 = 0;
@@ -152,15 +153,28 @@ public class MainActivity extends AppCompatActivity {
                     final UUID[] faceIds = new UUID[facesDetected.length];
                     for (int i = 0; i < facesDetected.length; i++) {
                         faceIds[i] = facesDetected[i].faceId;
-//                    System.out.println("aaaaaaaaaaaa"+facesDetected[i].faceId);
+                        //System.out.println("aaaaaaaaaaaa"+facesDetected[i].faceId);
                     }
 
                     new IdentifycasionTask(personGroupId).execute(faceIds);
                 }catch (Exception e){
                     Toast.makeText(MainActivity.this, getString(R.string.dt_done), Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
+
+                break;
+            case R.id.imageView:
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.dialog_view_image, null);
+                PhotoView photoView = mView.findViewById(R.id.imageZoomView);
+                photoView.setImageBitmap(mBitmap);
+                mBuilder.setView(mView);
+                AlertDialog mDialog = mBuilder.create();
+                mDialog.show();
+
+                break;
+            default:
+                break;
+        }
     }
 
     private class IdentifycasionTask extends AsyncTask<UUID, String, IdentifyResult[]> {

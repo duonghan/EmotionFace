@@ -10,14 +10,17 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.github.chrisbanes.photoview.PhotoView;
 import com.microsoft.projectoxford.face.FaceServiceClient;
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton btnCamera;
 
 
+
     int index = 0;
     Student[] namePerson;
     int numberPerson = 0;
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         FaceServiceClient.FaceAttributeType.Emotion});
                 if (results == null)
                 {
-                    //Toast.makeText(MainActivity.this, "Detection Finished. Nothing detected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MainActivity.this, "Detection Finished. Nothing detected", Toast.LENGTH_SHORT).show();
                     publishProgress(getString(R.string.dt_no));
                     return null;
                 }
@@ -106,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,6 +122,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCamera = (ImageButton)findViewById(R.id.btnCamera);
         Button btnDetect = (Button)findViewById(R.id.btnDetectFace);
         Button btnIdentify = (Button)findViewById(R.id.btnIdentify);
+
+
 
         btnCamera.setOnClickListener(this);
         btnIdentify.setOnClickListener(this);
@@ -231,8 +238,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                    index++;
                     //Toast.makeText(MainActivity.this, "Không nhận diện được", Toast.LENGTH_SHORT).show();
                     //new PersonDetectionTask(personGroupId).execute(identifyResults[i].candidates.get(0).personId);
-                    ImageView img = (ImageView)findViewById(R.id.imageView);
-                    img.setImageBitmap(drawFaceRectangleOnBitmap(mBitmap, facesDetected, "", namePerson));
+//                    ImageView img = (ImageView)findViewById(R.id.imageView);
+                    imageView.setImageBitmap(drawFaceRectangleOnBitmap(mBitmap, facesDetected, "", namePerson));
                 }
             }
         }
@@ -272,12 +279,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mDialog.dismiss();
 
             //Toast.makeText(MainActivity.this, ""+person.name, Toast.LENGTH_SHORT).show();
-            ImageView img = (ImageView)findViewById(R.id.imageView);
+//            ImageView img = (ImageView)findViewById(R.id.imageView);
 
             try {
                 namePerson[indexName[index3]].setName(person.name);
                 index3++;
-                img.setImageBitmap(drawFaceRectangleOnBitmap(mBitmap, facesDetected, person.name, namePerson));
+                imageView.setImageBitmap(drawFaceRectangleOnBitmap(mBitmap, facesDetected, person.name, namePerson));
+                mBitmap = drawFaceRectangleOnBitmap(mBitmap, facesDetected, "", namePerson);
+
             }catch (Exception e){}
         }
 
@@ -296,7 +305,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.WHITE);
-        paint.setStrokeWidth(12);
+        paint.setStrokeWidth(2);
 
         int storeNumber = 0;
         for(storeNumber = 0; storeNumber < numberPerson; storeNumber++){
@@ -364,16 +373,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         switch (position){
-            case 0: return "Giận dữ";
-            case 1: return "Kinh thường";
-            case 2: return "Kinh tởm";
-            case 3: return "Ghê sợ";
-            case 4: return "Hạnh phúc";
-            case 5: return "Trung lập";
-            case 6: return "Buồn bã";
-            case 7: return "Ngạc nhiên";
+            case 0: return getString(R.string.anger);
+            case 1: return getString(R.string.contempt);
+            case 2: return getString(R.string.disgust);
+            case 3: return getString(R.string.fear);
+            case 4: return getString(R.string.happiness);
+            case 5: return getString(R.string.neutral);
+            case 6: return getString(R.string.sadness);
+            case 7: return getString(R.string.surprise);
             default: return "";
         }
+
     }
 
     private void drawTextOnCanvas(Canvas canvas, int textSize, int x, int y, int color, String name) {
@@ -389,6 +399,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         canvas.drawText(name, x - (textWidth/2), y - (textSize/2), paint);
     }
 
+    //
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -10,4 +10,15 @@
     <string name="ident_pers_stt">Getting person group status...</string>
     <string name="identify">Identify Face</string>
     <string name="img_desc">Test Image</string>
+    <string name="anger">Anger</string>
+    <string name="contempt">Contempt</string>
+    <string name="disgust">Disgust</string>
+    <string name="fear">Fear</string>
+    <string name="happiness">Happiness</string>
+    <string name="neutral">Neutral</string>
+    <string name="sadness">Sadness</string>
+    <string name="surprise">Surprise</string>
+    <string name="tab_emotion">Emotion</string>
+    <string name="tab_roll_call">Roll Call</string>
+    <string name="tab_faceid">Cognitive</string>
 </resources>

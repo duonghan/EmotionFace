@@ -9,4 +9,24 @@
     <string name="dt">Đang xử lý nhận diện...</string>
     <string name="ident_pers_stt">Đang lấy thông tin trạng thái...</string>
     <string name="img_desc">Hình ảnh kiểm tra</string>
+    <string name="anger">Giận dữ</string>
+    <string name="contempt">Kinh thường</string>
+    <string name="disgust">Kinh tởm</string>
+    <string name="fear">Ghê sợ</string>
+    <string name="happiness">Hạnh phúc</string>
+    <string name="neutral">Trung lập</string>
+    <string name="sadness">Buồn bã</string>
+    <string name="surprise">Ngạc nhiên</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_emotion">Cảm xúc</string>
+    <string name="tab_roll_call">Điểm danh</string>
+    <string name="tab_faceid">Nhận dạng</string>
 </resources>

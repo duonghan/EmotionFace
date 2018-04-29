@@ -20,4 +20,21 @@
     <color name="red">#ec2020</color>
     <color name="green">#7ad624</color>
 
+    <color name="tb_palm_leaf">#76B041</color>
+    <color name="tb_charleston_green">#2E282A</color>
+    <color name="tb_mikado_yellow">#FFC914</color>
+    <color name="tb_tiffany_blue">#17BEBB</color>
+    <color name="tb_flame">#E4572E</color>
+
+    <color name="bg_independence">#4E5166</color>
+    <color name="bg_shadow_blue">#7C90A0</color>
+    <color name="bg_dark_gray">#B5AA9D</color>
+    <color name="bg_black_shadow">#B9B7A7</color>
+
+    <color name="ceil">#9191E9</color>
+    <color name="steel_blue">#457EAC</color>
+    <color name="mughal_green">#345830</color>
+    <color name="malachite">#20BF55</color>
+    <color name="cyber_grape">#54457F</color>
+
 </resources>

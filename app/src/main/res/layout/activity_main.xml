@@ -7,42 +7,30 @@
     android:layout_height="match_parent"
     tools:context="vn.edu.hust.student.haicm.cognitiveldentify.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/groupButton"
-        android:layout_alignParentBottom="true"
-        android:weightSum="2"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/action_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <Button
-            android:id="@+id/btnDetectFace"
-            android:layout_weight="1"
-            android:text="@string/detect"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"></include>
 
-        <ImageButton
-            android:id="@+id/btnCamera"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_camera"/>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tb_flame">
 
-        <Button
-            android:id="@+id/btnIdentify"
-            android:layout_weight="1"
-            android:text="@string/identify"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_above="@id/groupButton"
-        android:contentDescription="@string/img_desc"
-        android:padding="2dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_below="@id/action_bar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </RelativeLayout>

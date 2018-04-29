@@ -21,4 +21,9 @@
     <string name="tab_emotion">Emotion</string>
     <string name="tab_roll_call">Roll Call</string>
     <string name="tab_faceid">Cognitive</string>
+    <string name="setting">Settings</string>
+    <string name="about">About</string>
+    <string name="action_settings">Settings</string>
+    <string name="change_lang">Change language</string>
+    <string name="help">Help</string>
 </resources>

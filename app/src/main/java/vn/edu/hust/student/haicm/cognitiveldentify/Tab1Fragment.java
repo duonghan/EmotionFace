@@ -400,4 +400,13 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
         canvas.drawText(name, x - (textWidth/2), y - (textSize/2), paint);
     }
 
+    //
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        mBitmap = (Bitmap) data.getExtras().get("data");
+        imageView.setImageBitmap(mBitmap);
+    }
+
 }

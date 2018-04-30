@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
+    android:background="@color/primary_darker"
     tools:context=".SplashActivity">
 
     <ImageView
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:layout_below="@id/splash_img"
@@ -27,11 +27,11 @@
         android:layout_marginTop="20dp"/>
 
     <ProgressBar
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_below="@id/splash_text"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/red"
-        android:layout_marginTop="10dp"/>
+        android:backgroundTint="@color/ceil"
+        android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

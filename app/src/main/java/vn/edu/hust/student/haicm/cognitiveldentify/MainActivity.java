@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity{
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle(R.string.choose_lang);
+        builder.setIcon(R.drawable.ic_change_lang);
         builder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

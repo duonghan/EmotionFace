@@ -4,6 +4,7 @@ package vn.edu.hust.student.haicm.cognitiveldentify;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -36,6 +37,7 @@ import com.microsoft.projectoxford.face.contract.TrainingStatus;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.UUID;
 
@@ -58,6 +60,8 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
     private int[] indexName;
     private int index2 = 0;
     private int index3 = 0;
+
+    // Respond code from Intent
     private final int PICK_IMAGE = 100;
     private final int OPEN_CAMERA = 111;
     Uri imageUri;
@@ -126,10 +130,8 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
         imageView = (ImageView)view.findViewById(R.id.imageView);
         imageView.setImageBitmap(mBitmap);
         btnCamera = (ImageButton)view.findViewById(R.id.btnCamera);
-        Button btnGallery = (Button)view.findViewById(R.id.btnGallery);
+        Button btnGallery = (Button)view.findViewById(R.id.btnDetect);
         Button btnIdentify = (Button)view.findViewById(R.id.btnIdentify);
-
-
 
         btnCamera.setOnClickListener(this);
         btnIdentify.setOnClickListener(this);
@@ -142,26 +144,21 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
+
         switch (view.getId()){
             case R.id.btnCamera:
-                Intent intent= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, OPEN_CAMERA);
-
+                // Display dialog to select either take photo or pick from gallery
+                selectImage();
                 break;
-            case R.id.btnGallery:
-                openGallery();
-
-                break;
-            case R.id.btnIdentify:
-
+            case R.id.btnDetect:
                 // Detect Face
-
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                 mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
-
                 new Tab1Fragment.detectTask().execute(inputStream);
 
+                break;
+            case R.id.btnIdentify:
                 // Identify Face
                 try {
                     index = 0;
@@ -202,6 +199,34 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
     private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(gallery, PICK_IMAGE);
+    }
+
+    private void selectImage(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.add_photo);
+        builder.setIcon(R.drawable.ic_add_image);
+
+        builder.setItems(R.array.select_item, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                switch (i){
+                    case 0:
+                        Intent intent= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        startActivityForResult(intent, OPEN_CAMERA);
+                        break;
+                    case 1:
+                        openGallery();
+                        break;
+                    default:
+                        dialogInterface.dismiss();
+                        break;
+
+                }
+            }
+        });
+
+        builder.show();
     }
 
     private class IdentifycasionTask extends AsyncTask<UUID, String, IdentifyResult[]> {
@@ -325,7 +350,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.WHITE);
-        paint.setStrokeWidth(2);
+        paint.setStrokeWidth(3);
 
         int storeNumber = 0;
         for(storeNumber = 0; storeNumber < numberPerson; storeNumber++){
@@ -338,6 +363,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
             if(storeNumber == numberPerson) {
                 for (int i = 0; i < facesDetected.length; i++) {
                     FaceAttribute faceAttribute = facesDetected[i].faceAttributes;
+
                     String emotion = predictEmotion(faceAttribute.emotion.anger,
                             faceAttribute.emotion.contempt,
                             faceAttribute.emotion.disgust,
@@ -346,6 +372,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
                             faceAttribute.emotion.neutral,
                             faceAttribute.emotion.sadness,
                             faceAttribute.emotion.surprise);
+
                     FaceRectangle faceRectangle = facesDetected[i].faceRectangle;
                     //System.out.println("bbbbbbbbbbbbbbb" + facesDetected[i].faceId);
                     int store = 0;
@@ -357,14 +384,19 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
                     }
 
                     String test = "\nCảm xúc: " + emotion + "\nTuổi: " + faceAttribute.age + "\nGiới tính: " + faceAttribute.gender;
+                    String emotionInfo = "\nCảm xúc: " + emotion + "\nGiới tính: " + (faceAttribute.gender.equals("male") ? "Nam" : "Nữ");
                     System.out.println("----------------------------------------------------------------------------------------------");
                     System.out.println(test);
                     canvas.drawRect(faceRectangle.left, faceRectangle.top, faceRectangle.left + faceRectangle.width, faceRectangle.top + faceRectangle.height, paint);
-                    if (namePerson[store].getName().equals("")) {
-                        drawTextOnCanvas(canvas, 15, ((faceRectangle.left + faceRectangle.width) / 2) + 100, (faceRectangle.top + faceRectangle.height) + 50, Color.RED, "NULL" + test);
-                    } else {
-                        drawTextOnCanvas(canvas, 15, ((faceRectangle.left + faceRectangle.width) / 2) + 100, (faceRectangle.top + faceRectangle.height) + 50, Color.RED, namePerson[store].getName()+test);
-                    }
+
+                    // Write information text
+//                    if (namePerson[store].getName().equals("")) {
+//                        drawTextOnCanvas(canvas, 30, ((faceRectangle.left + faceRectangle.width) / 2) + 100, (faceRectangle.top + faceRectangle.height) + 50, Color.RED, "NULL" + test);
+//                    } else {
+//                        drawTextOnCanvas(canvas, 30, ((faceRectangle.left + faceRectangle.width) / 2) + 100, (faceRectangle.top + faceRectangle.height) + 50, Color.RED, namePerson[store].getName()+test);
+//                    }
+
+                    drawTextOnCanvas(canvas, 40, ((faceRectangle.left + faceRectangle.width) / 2) + 100, (faceRectangle.top + faceRectangle.height) + 50, Color.RED, emotionInfo);
                 }
             }
         }
@@ -432,7 +464,15 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
         if(resultCode == RESULT_OK && requestCode == PICK_IMAGE){
             imageUri = data.getData();
             imageView.setImageURI(imageUri);
-//            mBitmap = (Bitmap) data.getExtras().get("data");
+
+            try {
+                mBitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
+//                // Log.d(TAG, String.valueOf(bitmap));
+
+//                imageView.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

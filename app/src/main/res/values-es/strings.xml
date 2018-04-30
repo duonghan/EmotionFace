@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Detectar la emoción</string>
+    <string name="detect">Detectar rostro</string>
+    <string name="identify">Identificar la cara</string>
+    <string name="dt_failed">¡Detección fallida!</string>
+    <string name="dt_no">Detección finalizada Nada detectado</string>
+    <string name="dt_ok">Detección finalizada % d rostro (s) detectado</string>
+    <string name="dt_done">Detección finalizada Hecho</string>
+    <string name="dt">Detectando ...</string>
+    <string name="ident_pers_stt">Obteniendo estado de mero ...</string>
+    <string name="img_desc">Prueba de imagen</string>
+    <string name="anger">Enojo</string>
+    <string name="contempt">Desprecio</string>
+    <string name="disgust">Disgusto</string>
+    <string name="fear">Miedo</string>
+    <string name="happiness">Felicidad</string>
+    <string name="neutral">Neutral</string>
+    <string name="sadness">Tristeza</string>
+    <string name="surprise">Sorpresa</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="tab_emotion">Emoción</string>
+    <string name="tab_roll_call">Roll Call</string>
+    <string name="tab_faceid">Cognitivo</string>
+    <string name="setting">Configuraciones</string>
+    <string name="about">Acerca de</string>
+    <string name="change_lang">Cambiar idioma</string>
+    <string name="help">Ayuda</string>
+    <string name="choose_lang">Chọn ngôn ngữ</string>
+    <string name="title_activity_settings">Configuraciones</string>
+    <string name="app_ver">Versión 1.0.430</string>
+</resources>

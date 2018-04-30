@@ -1,4 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Nhận diện cảm xúc</string>
+    <string name="app_name">Détecter l\'émotion</string>
+    <string name="detect">Détecter le visage</string>
+    <string name="dt_failed">La détection a échoué!</string>
+    <string name="dt_no">Détection terminée. Rien n\'a été détecté</string>
+    <string name="dt_ok">Détection terminée. % d visage (s) détecté (s)</string>
+    <string name="dt_done">Détection terminée. Terminé</string>
+    <string name="dt">Détecter ...</string>
+    <string name="ident_pers_stt">Obtention du statut de groupe de personnes ...</string>
+    <string name="identify">Identifier le visage</string>
+    <string name="img_desc">Image de test</string>
+    <string name="anger">Colère</string>
+    <string name="contempt">Mépris</string>
+    <string name="disgust">Dégoûter</string>
+    <string name="fear">Peur</string>
+    <string name="happiness">Bonheur</string>
+    <string name="neutral">Neutre</string>
+    <string name="sadness">Tristesse</string>
+    <string name="surprise">Surprise</string>
+    <string name="tab_emotion">Émotion</string>
+    <string name="tab_roll_call">Appel</string>
+    <string name="tab_faceid">Cognitif</string>
+    <string name="setting">Paramètres</string>
+    <string name="about">Sur</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="change_lang">Changer de langue</string>
+    <string name="help">Aidez-moi</string>
+    <string name="choose_lang">Choisissez la langue</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="app_ver">Version 1.0.430</string>
+
+
+    Détection terminée. Rien n'a été détecté
+    Détection terminée. % d visage (s) détecté (s)
+    Détection terminée. Terminé
+    Détecter ...
+    Obtention du statut de groupe de personnes ...
+    Image de test
+    Colère
+    Mépris
+    Dégoûter
+    Peur
+    Bonheur
+    Neutre
+    Tristesse
+    Surprise
+    Paramètres
+    Émotion
+    Appel
+    Cognitif
+    Paramètres
+    Sur
+    Changer de langue
+    Aidez-moi
 </resources>

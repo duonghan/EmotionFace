@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Nhận diện cảm xúc</string>
+    <string name="app_name">감정 감지</string>
+    <string name="disgust">싫음</string>
+    <string name="detect">얼굴 검출</string>
+    <string name="identify">얼굴 식별</string>
+    <string name="dt_failed">감지에 실패했습니다!</string>
+    <string name="dt_no">감지 완료. 아무것도 찾지 못했습니다.</string>
+    <string name="dt_ok">감지 완료. 얼굴 % d 개 감지 됨</string>
+    <string name="dt_done">감지 완료. 끝난</string>
+    <string name="dt">감지 중 ...</string>
+    <string name="ident_pers_stt">사용자 그룹 상태 가져 오는 중 ...</string>
+    <string name="img_desc">이미지 테스트</string>
+    <string name="anger">분노</string>
+    <string name="contempt">경멸</string>
+    <string name="fear">무서움</string>
+    <string name="happiness">행복</string>
+    <string name="neutral">중립국</string>
+    <string name="sadness">비애</string>
+    <string name="surprise">놀람</string>
+    <string name="action_settings">설정</string>
+    <string name="tab_emotion">감정</string>
+    <string name="tab_roll_call">점호</string>
+    <string name="tab_faceid">인지 적</string>
+    <string name="setting">설정</string>
+    <string name="about">약</string>
+    <string name="change_lang">언어 변경</string>
+    <string name="help">도움</string>
+    <string name="choose_lang">언어 선택</string>
+    <string name="title_activity_settings">설정</string>
+    <string name="app_ver">버전 1.0.430</string>
 </resources>

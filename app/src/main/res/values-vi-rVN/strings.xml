@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Nhận diện cảm xúc</string>
+    <string name="detect">Phát hiện</string>
+    <string name="identify">Xác định</string>
+    <string name="dt_failed">Phát hiện thất bại</string>
+    <string name="dt_no">Quá trình hoàn tất! Không phát hiện được gì</string>
+    <string name="dt_ok">Quá trình hoàn tất! %d khuôn mặt được phát hiện</string>
+    <string name="dt_done">Quá trình hoàn tất! Đã nhận diện</string>
+    <string name="dt">Đang xử lý nhận diện...</string>
+    <string name="ident_pers_stt">Đang lấy thông tin trạng thái...</string>
+    <string name="img_desc">Hình ảnh kiểm tra</string>
+    <string name="anger">Giận dữ</string>
+    <string name="contempt">Kinh thường</string>
+    <string name="disgust">Kinh tởm</string>
+    <string name="fear">Ghê sợ</string>
+    <string name="happiness">Hạnh phúc</string>
+    <string name="neutral">Trung lập</string>
+    <string name="sadness">Buồn bã</string>
+    <string name="surprise">Ngạc nhiên</string>
+    <string name="action_settings">Thiết lập</string>
+    <string name="tab_emotion">Cảm xúc</string>
+    <string name="tab_roll_call">Điểm danh</string>
+    <string name="tab_faceid">Nhận dạng</string>
+    <string name="setting">Thiết lập</string>
+    <string name="about">Thông tin</string>
+    <string name="change_lang">Thay đổi ngôn ngữ</string>
+    <string name="help">Trợ giúp</string>
+    <string name="choose_lang">Chọn ngôn ngữ</string>
+    <string name="app_ver">Phiên bản 1.0.430</string>
+    <string name="title_activity_settings">Thiết lập</string>
 </resources>

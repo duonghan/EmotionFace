@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">检测情绪</string>
+    <string name="detect">检测脸部</string>
+    <string name="identify">识别人脸</string>
+    <string name="dt_failed">检测失败！</string>
+    <string name="dt_no">检测完成。 没有检测到</string>
+    <string name="dt_ok">检测完成。 检测到％d个脸部</string>
+    <string name="dt_done">检测完成。完成</string>
+    <string name="dt">检测...</string>
+    <string name="ident_pers_stt">获取人员组状态...</string>
+    <string name="img_desc">测试图像</string>
+    <string name="anger">愤怒</string>
+    <string name="contempt">鄙视</string>
+    <string name="disgust">厌恶</string>
+    <string name="fear">恐惧</string>
+    <string name="happiness">幸福</string>
+    <string name="neutral">中性</string>
+    <string name="sadness">悲</string>
+    <string name="surprise">惊</string>
+    <string name="action_settings">设置</string>
+    <string name="tab_emotion">情感</string>
+    <string name="tab_roll_call">点名</string>
+    <string name="tab_faceid">认知</string>
+    <string name="setting">设置</string>
+    <string name="about">关于</string>
+    <string name="change_lang">改变语言</string>
+    <string name="help">帮帮我</string>
+    <string name="choose_lang">选择语言</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="app_ver">版本 1.0.430</string>
+</resources>

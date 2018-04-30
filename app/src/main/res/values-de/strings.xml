@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Nhận diện cảm xúc</string>
+    <string name="app_name">Emotionen erkennen</string>
+    <string name="detect">Gesicht erkennen</string>
+    <string name="identify">Gesicht identifizieren</string>
+    <string name="dt_failed">Erkennung fehlgeschlagen!</string>
+    <string name="dt_no">Erkennung abgeschlossen Nichts entdeckt</string>
+    <string name="dt_ok">Erkennung abgeschlossen % d Gesicht (e) erkannt</string>
+    <string name="dt_done">Erkennung abgeschlossen Erledigt</string>
+    <string name="dt">Erkennen ...</string>
+    <string name="ident_pers_stt">Gruppenstatus bekommen ...</string>
+    <string name="img_desc">Testbild</string>
+    <string name="anger">Zorn</string>
+    <string name="contempt">Verachtung</string>
+    <string name="disgust">Der Ekel</string>
+    <string name="fear">Angst</string>
+    <string name="happiness">Glück</string>
+    <string name="neutral">Neutral</string>
+    <string name="sadness">Traurigkeit</string>
+    <string name="surprise">Überraschung</string>
+    <string name="action_settings">die Einstellungen</string>
+    <string name="tab_emotion">Emotion</string>
+    <string name="tab_roll_call">Roll Anruf</string>
+    <string name="tab_faceid">Kognitiv</string>
+    <string name="setting">die Einstellungen</string>
+    <string name="about">Über</string>
+    <string name="change_lang">Sprache ändern</string>
+    <string name="help">Hilfe</string>
+    <string name="choose_lang">Sprache wählen</string>
+    <string name="title_activity_settings">die Einstellungen</string>
+    <string name="app_ver">Version 1.0.430</string>
 </resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rileva l\'emozione</string>
+    <string name="detect">Rileva volto</string>
+    <string name="identify">Identificare la faccia</string>
+    <string name="dt_failed">Rilevamento fallito!</string>
+    <string name="dt_no">Rilevazione completata. Nulla rilevato</string>
+    <string name="dt_ok">Rilevazione completata. % d volto / i rilevato / i</string>
+    <string name="dt_done">Rilevazione completata. fatto</string>
+    <string name="dt">Rilevare ...</string>
+    <string name="ident_pers_stt">Ottenere lo status di cernia ...</string>
+    <string name="img_desc">Test delle immagini</string>
+    <string name="anger">rabbia</string>
+    <string name="contempt">disprezzo</string>
+    <string name="disgust">disgusto</string>
+    <string name="fear">paura</string>
+    <string name="happiness">felicità</string>
+    <string name="neutral">neutro</string>
+    <string name="sadness">tristezza</string>
+    <string name="surprise">sorpresa</string>
+    <string name="action_settings">impostazioni</string>
+    <string name="tab_emotion">emozione</string>
+    <string name="tab_roll_call">Roll Call</string>
+    <string name="tab_faceid">conoscitivo</string>
+    <string name="setting">impostazioni</string>
+    <string name="about">su</string>
+    <string name="change_lang">Cambia lingua</string>
+    <string name="help">Aiuto</string>
+    <string name="choose_lang">Scegli la lingua</string>
+    <string name="title_activity_settings">impostazioni</string>
+    <string name="app_ver">Versione 1.0.430</string>
+</resources>

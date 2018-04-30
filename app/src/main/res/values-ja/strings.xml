@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Nhận diện cảm xúc</string>
+    <string name="app_name">感情を検出する</string>
+    <string name="detect">顔を検出する</string>
+    <string name="identify">顔を特定する</string>
+    <string name="dt_failed">検出に失敗しました！</string>
+    <string name="dt_no">検出が完了しました。 何も検出されなかった</string>
+    <string name="dt_ok">検出が完了しました。 ％d個の顔が検出されました</string>
+    <string name="dt_done">検出が完了しました。 完了</string>
+    <string name="dt">検出中...</string>
+    <string name="ident_pers_stt">ユーザーグループのステータスを取得しています...</string>
+    <string name="img_desc">テストイメージ</string>
+    <string name="anger">怒り</string>
+    <string name="contempt">軽蔑</string>
+    <string name="disgust">嫌悪</string>
+    <string name="fear">恐れ</string>
+    <string name="happiness">幸福</string>
+    <string name="neutral">中性</string>
+    <string name="sadness">悲しみ</string>
+    <string name="surprise">驚き</string>
+    <string name="action_settings">設定</string>
+    <string name="tab_emotion">感情</string>
+    <string name="tab_roll_call">点呼</string>
+    <string name="tab_faceid">認知</string>
+    <string name="setting">設定</string>
+    <string name="about">約</string>
+    <string name="change_lang">言語を変えてください</string>
+    <string name="help">助けて</string>
+    <string name="choose_lang">言語を選択</string>
+    <string name="title_activity_settings">設定</string>
+    <string name="app_ver">バージョン 1.0.430</string>
 </resources>

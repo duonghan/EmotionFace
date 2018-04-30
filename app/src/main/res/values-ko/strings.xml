@@ -30,4 +30,22 @@
     <string name="title_activity_settings">설정</string>
     <string name="app_ver">버전 1.0.430</string>
     <string name="gallery">갱도</string>
+    <string-array name="select_item">
+        <item>사진을 찍다</item>
+        <item>갤러리에서 선택하십시오</item>
+        <item>취소</item>
+    </string-array>
+    <string name="app_descrip">응용 프로그램 지원 감정 탐지, 스냅 샷을 기반으로 사용자를 확인합니다.</string>
+    <string name="app_credits">이 응용 프로그램은 Dương Hàn 및 Hải Cao가 생성했습니다.</string>
+    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_cpr">저작권 © 2018</string>
+    <string name="help_tip"><b>사용 설명서</b>\n
+        <li><i>인터넷 연결이 필요합니다.</i></li>\n
+        <li>사진을 찍거나 사진 보관함에서 사진을 선택하십시오.</li>\n
+        <li>얼굴 인식 버튼을 클릭 한 다음 버튼을 선택하고 현재 감정을 확인하십시오.</li>\n
+        <li>확대하여 보이게하십시오.</li>\n
+        <li>설정에서 언어를 변경하십시오.</li>\n
+
+    </string>
+    <string name="add_photo">사진 추가</string>
 </resources>

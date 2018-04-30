@@ -30,4 +30,23 @@
     <string name="title_activity_settings">die Einstellungen</string>
     <string name="app_ver">Version 1.0.430</string>
     <string name="gallery">Galerie</string>
+    <string-array name="select_item">
+        <item>Foto machen</item>
+        <item>Wählen Sie aus der Galerie</item>
+        <item>Stornieren</item>
+    </string-array>
+
+    <string name="app_descrip">Application Support Emotion Detection, die den Benutzer basierend auf dem Snapshot überprüft.</string>
+    <string name="app_credits">Diese Anwendung wurde von Dương Hàn und Hải Cao erstellt</string>
+    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_cpr">Urheberrechte © 2018</string>
+    <string name="help_tip"><b>Benutzerhandbuch</b>\n
+        <li><i>Erfordern eine Internetverbindung.</i></li>\n
+        <li>Machen Sie ein Foto oder wählen Sie ein Bild in Ihrer Foto-Bibliothek.</li>\n
+        <li>Klicken Sie auf die Gesichtserkennungs-Schaltfläche, dann auf die Schaltfläche und bestätigen Sie, um die aktuelle Emotion anzuzeigen.</li>\n
+        <li>Zoomen Sie hinein, um es besser sichtbar zu machen.</li>\n
+        <li>Ändern Sie die Sprache in den Einstellungen.</li>\n
+
+    </string>
+    <string name="add_photo">Foto hinzufügen</string>
 </resources>

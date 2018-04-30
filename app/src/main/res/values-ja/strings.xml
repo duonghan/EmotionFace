@@ -30,4 +30,22 @@
     <string name="title_activity_settings">設定</string>
     <string name="app_ver">バージョン 1.0.430</string>
     <string name="gallery">ギャラリー</string>
+    <string-array name="select_item">
+        <item>写真を撮る</item>
+        <item>ギャラリーから選択</item>
+        <item>キャンセル</item>
+    </string-array>
+    <string name="app_descrip">アプリケーションサポート感情検出、スナップショットに基づいてユーザーを確認します。</string>
+    <string name="app_credits">このアプリケーションはDươngHànとHảiCaoによって作成されました</string>
+    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_cpr">著作権 © 2018</string>
+    <string name="help_tip"><b>ユーザーマニュアル</b>\n
+        <li><i>インターネット接続が必要です。</i></li>\n
+        <li>写真を撮るか、フォトライブラリの写真を選択してください。</li>\n
+        <li>顔検出ボタンをクリックし、ボタンを特定し、現在の感情を表示することを確認します。</li>\n
+        <li>ズームインすると、より見やすくなります。</li>\n
+        <li>設定で言語を変更します。</li>\n
+
+    </string>
+    <string name="add_photo">写真を追加</string>
 </resources>

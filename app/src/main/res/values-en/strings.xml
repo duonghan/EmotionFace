@@ -30,4 +30,24 @@
     <string name="title_activity_settings">Settings</string>
     <string name="app_ver">Version 1.0.430</string>
     <string name="gallery">Gallery</string>
+    <string-array name="select_item">
+        <item>Take Photo</item>
+        <item>Choose from Gallery</item>
+        <item>Cancel</item>
+    </string-array>
+
+    <string name="app_descrip">Application Support Emotion Detection, verifying the user based on the snapshot.</string>
+    <string name="app_credits">This application is created by Dương Hàn and Hải Cao</string>
+    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_cpr">Copyright © 2018</string>
+    <string name="help_tip"><b>User manual</b>\n
+        <li><i>Require Internet connection.</i></li>\n
+        <li>Take a picture or select a picture in your photo library.</li>\n
+        <li>Click the face detection button then identify button and confirm to show the current emotion.</li>\n
+        <li>Zoom in to make it more visible.</li>\n
+        <li>Change the language in the settings.</li>\n
+
+    </string>
+
+    <string name="add_photo">Add photo</string>
 </resources>

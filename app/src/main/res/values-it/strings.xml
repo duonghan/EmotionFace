@@ -30,4 +30,22 @@
     <string name="title_activity_settings">impostazioni</string>
     <string name="app_ver">Versione 1.0.430</string>
     <string name="gallery">Galleria</string>
+    <string-array name="select_item">
+        <item>Fare foto</item>
+        <item>Scegli dalla Galleria</item>
+        <item>Annulla</item>
+    </string-array>
+    <string name="app_descrip">Application Support Emotion Detection, verificando l'utente in base all'istantanea.</string>
+    <string name="app_credits">Questa applicazione è stata creata da Dương Hàn e Hải Cao</string>
+    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_cpr">Diritto d'autore © 2018</string>
+    <string name="help_tip"><b>Manuale utente</b>\n
+        <li><i>Richiedi connessione Internet.</i></li>\n
+        <li>Scatta una foto o seleziona un'immagine nella tua libreria di foto.</li>\n
+        <li>Fare clic sul pulsante di rilevamento viso, quindi identificare il pulsante e confermare per mostrare l'emozione corrente.</li>\n
+        <li>Aumenta lo zoom per renderlo più visibile.</li>\n
+        <li>Cambia la lingua nelle impostazioni.</li>\n
+
+    </string>
+    <string name="add_photo">Aggiungi fotoо</string>
 </resources>

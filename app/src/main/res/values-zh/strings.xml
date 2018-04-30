@@ -30,4 +30,22 @@
     <string name="title_activity_settings">设置</string>
     <string name="app_ver">版本 1.0.430</string>
     <string name="gallery">画廊</string>
+    <string-array name="select_item">
+        <item>拍照</item>
+        <item>从图书馆挑选</item>
+        <item>取消</item>
+    </string-array>
+    <string name="app_descrip">应用程序支持情绪检测，根据快照验证用户。</string>
+    <string name="app_credits">此应用程序由 DươngHàn 和 HảiCao 创建</string>
+    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_cpr">版权 © 2018</string>
+    <string name="help_tip"><b>用户手册</b>\n
+        <li><i>需要Internet连接。</i></li>\n
+        <li>拍照或在照片库中选择一张照片。</li>\n
+        <li>点击面部检测按钮，然后确定按钮并确认以显示当前情绪。</li>\n
+        <li>放大以使其更加明显。</li>\n
+        <li>更改设置中的语言。</li>\n
+
+    </string>
+    <string name="add_photo">添加照片</string>
 </resources>

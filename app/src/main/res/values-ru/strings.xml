@@ -30,4 +30,22 @@
     <string name="anger">гнев</string>
     <string name="about">Около</string>
     <string name="gallery">Галерея</string>
+    <string-array name="select_item">
+        <item>Фотографировать</item>
+        <item>Выберите из галереи</item>
+        <item>Отмена</item>
+    </string-array>
+    <string name="app_descrip">Поддержка приложений Emotion Detection, проверка пользователя на основе моментального снимка.</string>
+    <string name="app_credits">Это приложение создано Dương Hàn и Hải Cao</string>
+    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_cpr">Авторские права © 2018</string>
+    <string name="help_tip"><b>Руководство пользователя</b>\n
+        <li><i>Требуется подключение к Интернету.</i></li>\n
+        <li>Сделайте снимок или выберите изображение в своей библиотеке фотографий.</li>\n
+        <li>Нажмите кнопку обнаружения лица, затем выберите кнопку и подтвердите, чтобы показать текущую эмоцию.</li>\n
+        <li>Увеличьте масштаб, чтобы сделать его более заметным.</li>\n
+        <li>Измените язык в настройках.</li>\n
+
+    </string>
+    <string name="add_photo">Добавить фото</string>
 </resources>

@@ -28,61 +28,11 @@
     <string name="change_lang">Thay đổi ngôn ngữ</string>
     <string name="help">Trợ giúp</string>
 
-    <!-- Strings related to Settings -->
-
-    <!-- Example General settings -->
-
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
-
-    <!-- Example settings for Data & Sync -->
-
-    <string-array name="pref_sync_frequency_titles">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_sync_frequency_values">
-        <item>15</item>
-        <item>30</item>
-        <item>60</item>
-        <item>180</item>
-        <item>360</item>
-        <item>-1</item>
-    </string-array>
-
-    <string-array name="list_preference_entries">
-        <item>Entry 1</item>
-        <item>Entry 2</item>
-        <item>Entry 3</item>
-    </string-array>
-
-    <string-array name="list_preference_entry_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-
-    <string-array name="multi_select_list_preference_default_value" />
-
-    <!-- Example settings for Notifications -->
-
-    <string name="app_descrip" translatable="false">Ứng dụng hỗ trợ nhận diện cảm xúc, xác minh người dùng dựa trên ảnh chụp.</string>
-    <string name="app_credits" translatable="false">Ứng dụng được viết bởi Dương Hàn và Hải Cao</string>
+    <string name="app_descrip">Ứng dụng hỗ trợ nhận diện cảm xúc, xác minh người dùng dựa trên ảnh chụp.</string>
+    <string name="app_credits">Ứng dụng được viết bởi Dương Hàn và Hải Cao</string>
     <string name="app_ver">Phiên bản 1.0.430</string>
-    <string name="app_cpr" translatable="false">Copyright © 2018</string>
-    <string name="help_tip" translatable="false"><b>Hướng dẫn sử dụng phần mềm Nhận diện cảm xúc.</b>\n
+    <string name="app_cpr">Copyright © 2018</string>
+    <string name="help_tip"><b>Hướng dẫn sử dụng phần mềm Nhận diện cảm xúc.</b>\n
         <li><i>Yêu cầu có kết nối Internet.</i></li>\n
         <li>Chụp hình hoặc chọn hình trong thư viện ảnh.</li>\n
         <li>Chọn nút phát hiện khuôn mặt và xác nhận để hiển thị cảm xúc hiện tại.</li>\n
@@ -93,14 +43,13 @@
 
     <string name="title_activity_settings">Thiết lập</string>
 
-    <!-- Strings related to Settings -->
-
-    <!-- Example General settings -->
-
-    <!-- Example settings for Data & Sync -->
-
-    <!-- Example settings for Notifications -->
-
     <string name="choose_lang">Chọn ngôn ngữ</string>
     <string name="gallery">Thư viện</string>
+
+    <string-array name="select_item">
+        <item>Chụp ảnh</item>
+        <item>Chọn từ thư viện</item>
+        <item>Trở về</item>
+    </string-array>
+    <string name="add_photo">Thêm ảnh</string>
 </resources>

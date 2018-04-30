@@ -102,4 +102,5 @@
     <!-- Example settings for Notifications -->
 
     <string name="choose_lang">Chọn ngôn ngữ</string>
+    <string name="gallery">Thư viện</string>
 </resources>

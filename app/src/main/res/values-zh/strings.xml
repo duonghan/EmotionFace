@@ -29,4 +29,5 @@
     <string name="choose_lang">选择语言</string>
     <string name="title_activity_settings">设置</string>
     <string name="app_ver">版本 1.0.430</string>
+    <string name="gallery">画廊</string>
 </resources>

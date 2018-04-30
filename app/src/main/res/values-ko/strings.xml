@@ -29,4 +29,5 @@
     <string name="choose_lang">언어 선택</string>
     <string name="title_activity_settings">설정</string>
     <string name="app_ver">버전 1.0.430</string>
+    <string name="gallery">갱도</string>
 </resources>

@@ -7,17 +7,18 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
+
     <LinearLayout
         android:id="@+id/groupButton"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btnDetectFace"
+            android:id="@+id/btnGallery"
             android:layout_weight="1"
-            android:text="@string/detect"
+            android:text="@string/gallery"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
 

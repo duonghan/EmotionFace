@@ -1,6 +1,7 @@
 package vn.edu.hust.student.haicm.cognitiveldentify;
 
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -37,6 +39,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.UUID;
 
+import static android.app.Activity.RESULT_OK;
+
 public class Tab1Fragment extends Fragment implements View.OnClickListener{
     private static final String TAG = "Tab1Fragment";
 
@@ -54,6 +58,9 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
     private int[] indexName;
     private int index2 = 0;
     private int index3 = 0;
+    private final int PICK_IMAGE = 100;
+    private final int OPEN_CAMERA = 111;
+    Uri imageUri;
 
     public Tab1Fragment() {
     }
@@ -61,6 +68,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
     class detectTask extends AsyncTask<InputStream, String, Face[]> {
         private ProgressDialog mDialog = new ProgressDialog(getActivity());
 
+        @SuppressLint("StringFormatInvalid")
         @Override
         protected Face[] doInBackground(InputStream... params) {
             try{
@@ -118,14 +126,14 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
         imageView = (ImageView)view.findViewById(R.id.imageView);
         imageView.setImageBitmap(mBitmap);
         btnCamera = (ImageButton)view.findViewById(R.id.btnCamera);
-        Button btnDetect = (Button)view.findViewById(R.id.btnDetectFace);
+        Button btnGallery = (Button)view.findViewById(R.id.btnGallery);
         Button btnIdentify = (Button)view.findViewById(R.id.btnIdentify);
 
 
 
         btnCamera.setOnClickListener(this);
         btnIdentify.setOnClickListener(this);
-        btnDetect.setOnClickListener(this);
+        btnGallery.setOnClickListener(this);
         imageView.setOnClickListener(this);
 
 
@@ -137,18 +145,24 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
         switch (view.getId()){
             case R.id.btnCamera:
                 Intent intent= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
+                startActivityForResult(intent, OPEN_CAMERA);
 
                 break;
-            case R.id.btnDetectFace:
+            case R.id.btnGallery:
+                openGallery();
+
+                break;
+            case R.id.btnIdentify:
+
+                // Detect Face
+
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                 mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
 
                 new Tab1Fragment.detectTask().execute(inputStream);
 
-                break;
-            case R.id.btnIdentify:
+                // Identify Face
                 try {
                     index = 0;
                     index2 = 0;
@@ -183,6 +197,11 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
             default:
                 break;
         }
+    }
+
+    private void openGallery() {
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(gallery, PICK_IMAGE);
     }
 
     private class IdentifycasionTask extends AsyncTask<UUID, String, IdentifyResult[]> {
@@ -405,8 +424,16 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        mBitmap = (Bitmap) data.getExtras().get("data");
-        imageView.setImageBitmap(mBitmap);
+        if(resultCode == RESULT_OK && requestCode == OPEN_CAMERA) {
+            mBitmap = (Bitmap) data.getExtras().get("data");
+            imageView.setImageBitmap(mBitmap);
+        }
+
+        if(resultCode == RESULT_OK && requestCode == PICK_IMAGE){
+            imageUri = data.getData();
+            imageView.setImageURI(imageUri);
+//            mBitmap = (Bitmap) data.getExtras().get("data");
+        }
     }
 
 }

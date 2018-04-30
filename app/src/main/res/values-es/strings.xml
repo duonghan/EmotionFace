@@ -29,4 +29,5 @@
     <string name="choose_lang">Chọn ngôn ngữ</string>
     <string name="title_activity_settings">Configuraciones</string>
     <string name="app_ver">Versión 1.0.430</string>
+    <string name="gallery">Galería</string>
 </resources>

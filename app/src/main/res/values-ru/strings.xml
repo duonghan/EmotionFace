@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Nhận diện cảm xúc</string>
+    <string name="app_name">Обнаружить эмоции</string>
+    <string name="app_ver">Версия 1.0.430</string>
+    <string name="img_desc">Тестовое изображение</string>
+    <string name="surprise">сюрприз</string>
+    <string name="action_settings">настройки</string>
+    <string name="setting">настройки</string>
+    <string name="title_activity_settings">настройки</string>
+    <string name="sadness">печаль</string>
+    <string name="tab_roll_call">Перекличка</string>
+    <string name="neutral">нейтральный</string>
+    <string name="identify">Определить лицо</string>
+    <string name="help">Помогите</string>
+    <string name="happiness">Счастье</string>
+    <string name="ident_pers_stt">Получение статуса группы лиц ...</string>
+    <string name="fear">Страх</string>
+    <string name="tab_emotion">эмоция</string>
+    <string name="disgust">Отвращение</string>
+    <string name="dt_no">Обнаружение завершено. Не обнаружено ничего</string>
+    <string name="dt_done">Обнаружение завершено. Готово</string>
+    <string name="dt_ok">Обнаружение завершено. % d лицо (ы) обнаружено</string>
+    <string name="dt_failed">Обнаружение не удалось!</string>
+    <string name="dt">Детектирование ...</string>
+    <string name="detect">Обнаружить лицо</string>
+    <string name="contempt">презрение</string>
+    <string name="tab_faceid">познавательный</string>
+    <string name="choose_lang">Выберите язык</string>
+    <string name="change_lang">изменение языка</string>
+    <string name="anger">гнев</string>
+    <string name="about">Около</string>
+    <string name="gallery">Галерея</string>
 </resources>

@@ -28,7 +28,6 @@
     <string name="help">Ayuda</string>
     <string name="choose_lang">Chọn ngôn ngữ</string>
     <string name="title_activity_settings">Configuraciones</string>
-    <string name="app_ver">Versión 1.0.430</string>
     <string name="gallery">Galería</string>
     <string-array name="select_item">
         <item>Tomar foto</item>
@@ -38,7 +37,7 @@
 
     <string name="app_descrip">Application Support Emotion Detection, verificando al usuario en base a la instantánea.</string>
     <string name="app_credits">Esta aplicación es creada por Dương Hàn y Hải Cao</string>
-    <string name="app_ver">Version 1.0.430</string>
+    <string name="app_ver">Versión 1.0.430</string>
     <string name="app_cpr">Derechos de autor © 2018</string>
     <string name="help_tip"><b>Manual de usuario</b>\n
         <li><i>Requiere conexión a internet</i></li>\n

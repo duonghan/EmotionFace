@@ -37,7 +37,6 @@
     </string-array>
     <string name="app_descrip">应用程序支持情绪检测，根据快照验证用户。</string>
     <string name="app_credits">此应用程序由 DươngHàn 和 HảiCao 创建</string>
-    <string name="app_ver">Version 1.0.430</string>
     <string name="app_cpr">版权 © 2018</string>
     <string name="help_tip"><b>用户手册</b>\n
         <li><i>需要Internet连接。</i></li>\n

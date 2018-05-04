@@ -38,7 +38,6 @@
 
     <string name="app_descrip">Application Support Emotion Detection, die den Benutzer basierend auf dem Snapshot überprüft.</string>
     <string name="app_credits">Diese Anwendung wurde von Dương Hàn und Hải Cao erstellt</string>
-    <string name="app_ver">Version 1.0.430</string>
     <string name="app_cpr">Urheberrechte © 2018</string>
     <string name="help_tip"><b>Benutzerhandbuch</b>\n
         <li><i>Erfordern eine Internetverbindung.</i></li>\n

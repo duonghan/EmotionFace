@@ -37,7 +37,6 @@
     </string-array>
     <string name="app_descrip">Поддержка приложений Emotion Detection, проверка пользователя на основе моментального снимка.</string>
     <string name="app_credits">Это приложение создано Dương Hàn и Hải Cao</string>
-    <string name="app_ver">Version 1.0.430</string>
     <string name="app_cpr">Авторские права © 2018</string>
     <string name="help_tip"><b>Руководство пользователя</b>\n
         <li><i>Требуется подключение к Интернету.</i></li>\n

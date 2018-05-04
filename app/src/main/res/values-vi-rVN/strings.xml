@@ -38,7 +38,6 @@
 
     <string name="app_descrip">Ứng dụng hỗ trợ nhận diện cảm xúc, xác minh người dùng dựa trên ảnh chụp.</string>
     <string name="app_credits">Ứng dụng được viết bởi Dương Hàn và Hải Cao</string>
-    <string name="app_ver">Phiên bản 1.0.430</string>
     <string name="app_cpr">Copyright © 2018</string>
     <string name="help_tip"><b>Hướng dẫn sử dụng phần mềm Nhận diện cảm xúc.</b>\n
         <li><i>Yêu cầu có kết nối Internet.</i></li>\n

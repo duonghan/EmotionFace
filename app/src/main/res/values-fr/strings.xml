@@ -28,7 +28,6 @@
     <string name="help">Aidez-moi</string>
     <string name="choose_lang">Choisissez la langue</string>
     <string name="title_activity_settings">Paramètres</string>
-    <string name="app_ver">Version 1.0.430</string>
     <string name="gallery">Galerie</string>
     <string-array name="select_item">
         <item>Prendre une photo</item>
@@ -36,14 +35,14 @@
         <item>Annuler</item>
     </string-array>
 
-    <string name="app_descrip">Application Support Emotion Detection, vérifiant l'utilisateur en fonction de l'instantané.</string>
+    <string name="app_descrip">Application Support Emotion Detection, vérifiant l\'utilisateur en fonction de l\'instantané.</string>
     <string name="app_credits">Cette application est créée par Dương Hàn et Hải Cao</string>
     <string name="app_ver">Version 1.0.430</string>
-    <string name="app_cpr">droits d'auteur © 2018</string>
+    <string name="app_cpr">droits d\'auteur © 2018</string>
     <string name="help_tip"><b>Manuel utilisateur</b>\n
         <li><i>Nécessite une connexion Internet.</i></li>\n
         <li>Prenez une photo ou sélectionnez une photo dans votre photothèque.</li>\n
-        <li>Cliquez sur le bouton de détection de visage puis identifiez le bouton et confirmez pour afficher l'émotion actuelle.</li>\n
+        <li>Cliquez sur le bouton de détection de visage puis identifiez le bouton et confirmez pour afficher l\'émotion actuelle.</li>\n
         <li>Zoomez pour le rendre plus visible.</li>\n
         <li>Changez la langue dans les paramètres.</li>\n
 

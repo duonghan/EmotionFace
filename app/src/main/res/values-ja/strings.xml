@@ -37,7 +37,6 @@
     </string-array>
     <string name="app_descrip">アプリケーションサポート感情検出、スナップショットに基づいてユーザーを確認します。</string>
     <string name="app_credits">このアプリケーションはDươngHànとHảiCaoによって作成されました</string>
-    <string name="app_ver">Version 1.0.430</string>
     <string name="app_cpr">著作権 © 2018</string>
     <string name="help_tip"><b>ユーザーマニュアル</b>\n
         <li><i>インターネット接続が必要です。</i></li>\n

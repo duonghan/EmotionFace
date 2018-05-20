@@ -40,7 +40,7 @@
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:layout_below="@id/splash_img_link"
+        android:layout_below="@id/splash_img_emoji"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
